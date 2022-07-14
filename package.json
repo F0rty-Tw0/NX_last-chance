@@ -1,13 +1,22 @@
 {
   "name": "last-chance",
-  "version": "0.0.0",
-  "license": "MIT",
+  "description": "Give the products a last chance.",
+  "version": "1.0.0",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">16.15.0"
+  },
+  "engineStrict": true,
   "scripts": {
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2020 browser module main",
-    "start": "nx serve",
-    "build": "nx build",
-    "test": "nx test"
+    "lint": "nx affected --target=lint --parallel=5",
+    "stylelint": "nx affected --target=stylelint --parallel=5",
+    "test": "nx affected --target=test --parallel=5 --ci",
+    "start": "nx serve --open",
+    "build": "nx build"
   },
   "private": true,
   "dependencies": {
@@ -25,6 +34,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
+    "@angular-architects/ddd": "^2.1.2",
     "@angular-devkit/build-angular": "~14.0.0",
     "@angular-eslint/eslint-plugin": "~14.0.0",
     "@angular-eslint/eslint-plugin-template": "~14.0.0",
@@ -37,22 +47,55 @@
     "@nrwl/eslint-plugin-nx": "14.4.2",
     "@nrwl/jest": "14.4.2",
     "@nrwl/linter": "14.4.2",
+    "@nrwl/nest": "^14.4.2",
     "@nrwl/nx-cloud": "latest",
+    "@nrwl/storybook": "^14.4.2",
     "@nrwl/workspace": "14.4.2",
+    "@storybook/addon-essentials": "~6.5.9",
+    "@storybook/angular": "~6.5.9",
+    "@storybook/builder-webpack5": "~6.5.9",
+    "@storybook/core-server": "~6.5.9",
+    "@storybook/manager-webpack5": "~6.5.9",
     "@types/jest": "27.4.1",
     "@types/node": "16.11.7",
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",
+    "commitlint": "^17.0.3",
+    "commitlint-config-gitmoji": "^2.2.5",
     "cypress": "^9.1.0",
+    "cz-customizable": "^6.9.0",
     "eslint": "~8.15.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-rxjs": "^5.0.2",
+    "eslint-plugin-storybook": "^0.6.1",
+    "husky": "^8.0.1",
     "jest": "27.5.1",
     "jest-preset-angular": "~11.1.2",
+    "lint-staged": "^13.0.3",
     "nx": "14.4.2",
+    "nx-stylelint": "^13.5.2",
+    "postcss": "^8.4.14",
     "prettier": "^2.6.2",
+    "source-map-explorer": "^2.5.2",
+    "stylelint": "^14.5.3",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-config-standard-scss": "^4.0.0",
+    "stylelint-scss": "^4.3.0",
+    "stylelint-selector-bem-pattern": "^2.1.1",
     "ts-jest": "27.1.4",
     "ts-node": "~10.8.0",
-    "typescript": "~4.7.2"
+    "typescript": "~4.7.2",
+    "webpack": "^5.64.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
   }
 }

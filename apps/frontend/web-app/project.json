@@ -1,20 +1,21 @@
 {
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/web-app/src",
+  "sourceRoot": "apps/frontend/web-app/src",
   "prefix": "last-chance",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/web-app",
-        "index": "apps/web-app/src/index.html",
-        "main": "apps/web-app/src/main.ts",
-        "polyfills": "apps/web-app/src/polyfills.ts",
-        "tsConfig": "apps/web-app/tsconfig.app.json",
+        "outputPath": "dist/apps/frontend/web-app",
+        "index": "apps/frontend/web-app/src/index.html",
+        "main": "apps/frontend/web-app/src/main.ts",
+        "polyfills": "apps/frontend/web-app/src/polyfills.ts",
+        "tsConfig": "apps/frontend/web-app/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/web-app/src/favicon.ico", "apps/web-app/src/assets"],
-        "styles": ["apps/web-app/src/styles.scss"],
+        "assets": ["apps/frontend/web-app/src/favicon.ico", "apps/frontend/web-app/src/assets"],
+        "styles": ["apps/frontend/web-app/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -33,8 +34,8 @@
           ],
           "fileReplacements": [
             {
-              "replace": "apps/web-app/src/environments/environment.ts",
-              "with": "apps/web-app/src/environments/environment.prod.ts"
+              "replace": "apps/frontend/web-app/src/environments/environment.ts",
+              "with": "apps/frontend/web-app/src/environments/environment.prod.ts"
             }
           ],
           "outputHashing": "all"
@@ -54,10 +55,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "web-app:build:production"
+          "browserTarget": "frontend-web-app:build:production"
         },
         "development": {
-          "browserTarget": "web-app:build:development"
+          "browserTarget": "frontend-web-app:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -65,21 +66,28 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "web-app:build"
+        "browserTarget": "frontend-web-app:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["apps/web-app/**/*.ts", "apps/web-app/**/*.html"]
+        "lintFilePatterns": ["apps/frontend/web-app/**/*.ts", "apps/frontend/web-app/**/*.html"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/web-app"],
+      "outputs": ["coverage/apps/frontend/web-app"],
       "options": {
-        "jestConfig": "apps/web-app/jest.config.ts",
+        "jestConfig": "apps/frontend/web-app/jest.config.ts",
         "passWithNoTests": true
+      }
+    },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/frontend/web-app/**/*.css", "apps/frontend/web-app/**/*.scss"]
       }
     }
   },

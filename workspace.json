@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "projects": {
+    "frontend-web-app": "apps/frontend/web-app"
+  }
+}

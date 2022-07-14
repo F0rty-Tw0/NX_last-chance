@@ -2,9 +2,14 @@
   "root": true,
   "ignorePatterns": ["**/*"],
   "plugins": ["@nrwl/nx"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["./tsconfig.base.json"]
+  },
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "extends": ["airbnb-base", "airbnb-typescript/base"],
       "rules": {
         "@nrwl/nx/enforce-module-boundaries": [
           "error",
@@ -23,13 +28,76 @@
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nrwl/nx/typescript"],
-      "rules": {}
+      "extends": ["plugin:@nrwl/nx/typescript", "airbnb-typescript/base", "plugin:rxjs/recommended"],
+      "rules": {
+        "rxjs/no-ignored-subscription": ["error"],
+        "rxjs/prefer-observer": ["error"],
+        "rxjs/finnish": ["warn"],
+        "rxjs/no-ignored-error": ["warn"],
+        "rxjs/no-unsafe-switchmap": ["error"],
+        "rxjs/no-unsafe-takeuntil": ["error"],
+        "rxjs/no-unsafe-catch": ["error"],
+        "rxjs/no-unsafe-first": ["error"],
+        "rxjs/no-topromise": ["error"],
+        "rxjs/throw-error": ["error"],
+        "@typescript-eslint/explicit-function-return-type": ["warn"],
+        "@typescript-eslint/no-empty-function": ["error"],
+        "import/prefer-default-export": 0,
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": true
+          }
+        ],
+        "spaced-comment": [
+          2,
+          "always",
+          {
+            "block": {
+              "exceptions": ["*"]
+            }
+          }
+        ],
+        "max-len": [
+          "error",
+          {
+            "code": 120,
+            "ignoreComments": true
+          }
+        ],
+        "max-lines": [
+          "error",
+          {
+            "max": 150,
+            "skipBlankLines": true,
+            "skipComments": true
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.spec.ts"],
+      "rules": {
+        "rxjs/no-ignored-subscription": [0],
+        "max-lines": [
+          "error",
+          {
+            "max": 300,
+            "skipBlankLines": true,
+            "skipComments": true
+          }
+        ]
+      }
     },
     {
       "files": ["*.js", "*.jsx"],
       "extends": ["plugin:@nrwl/nx/javascript"],
       "rules": {}
+    },
+    {
+      "files": ["*.html"],
+      "plugins": ["prettier"],
+      "extends": ["plugin:@nrwl/nx/angular-template", "prettier"]
     }
   ]
 }
