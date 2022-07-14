@@ -2,7 +2,7 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "npmScope": "last-chance",
   "affected": {
-    "defaultBase": "main"
+    "defaultBase": "dev"
   },
   "cli": {
     "packageManager": "npm"
