@@ -1,0 +1,16 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/frontend/shared/styles/src",
+  "prefix": "last-chance",
+  "targets": {
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/frontend/shared/styles/**/*.scss"]
+      }
+    }
+  },
+  "implicitDependencies": ["frontend-shared-assets"],
+  "tags": ["layer:frontend", "domain:shared", "type:styles"]
+}

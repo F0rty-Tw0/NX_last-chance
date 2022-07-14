@@ -1,0 +1,20 @@
+// Set antialiased fonts for all browsers
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Set default sizing
+html,
+body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+// Set default animation duration for anchor and buttons
+a,
+button {
+  transition: all 250ms ease;
+}

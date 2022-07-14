@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'last-chance-root',
+  selector: 'last-chance-app',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrls: [],
 })
 export class AppComponent {
   title = 'web-app';

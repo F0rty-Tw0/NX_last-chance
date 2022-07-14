@@ -1,0 +1,6 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/frontend/shared/assets/src",
+  "prefix": "last-chance",
+  "tags": ["layer:frontend", "domain:shared", "type:assets"]
+}

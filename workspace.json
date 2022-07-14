@@ -1,6 +1,10 @@
 {
   "version": 2,
   "projects": {
-    "frontend-web-app": "apps/frontend/web-app"
+    "frontend-shared-assets": "libs/frontend/shared/assets",
+    "frontend-shared-styles": "libs/frontend/shared/styles",
+    "frontend-web-app": "apps/frontend/web-app",
+    "frontend-web-app-storybook": "libs/frontend/web-app/storybook",
+    "shared-utils": "libs/shared/utils"
   }
 }
