@@ -18,8 +18,48 @@
             "allow": [],
             "depConstraints": [
               {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
+                "sourceTag": "layer:frontend",
+                "onlyDependOnLibsWithTags": ["layer:frontend", "layer:shared"]
+              },
+              {
+                "sourceTag": "layer:backend",
+                "onlyDependOnLibsWithTags": ["layer:backend", "layer:shared"]
+              },
+              {
+                "sourceTag": "layer:shared",
+                "onlyDependOnLibsWithTags": ["layer:shared"]
+              },
+              {
+                "sourceTag": "scope:web-app",
+                "onlyDependOnLibsWithTags": ["scope:web-app", "scope:shared"]
+              },
+              {
+                "sourceTag": "scope:api",
+                "onlyDependOnLibsWithTags": ["scope:api"]
+              },
+              {
+                "sourceTag": "scope:mobile-app",
+                "onlyDependOnLibsWithTags": ["scope:mobile-app"]
+              },
+              {
+                "sourceTag": "scope:shared",
+                "onlyDependOnLibsWithTags": ["scope:shared"]
+              },
+              {
+                "sourceTag": "type:app",
+                "onlyDependOnLibsWithTags": ["type:shell", "type:util"]
+              },
+              {
+                "sourceTag": "type:util",
+                "onlyDependOnLibsWithTags": ["type:util"]
+              },
+              {
+                "sourceTag": "type:storybook",
+                "onlyDependOnLibsWithTags": ["type:storybook"]
+              },
+              {
+                "sourceTag": "domain:shared",
+                "onlyDependOnLibsWithTags": ["domain:shared"]
               }
             ]
           }

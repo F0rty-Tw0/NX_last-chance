@@ -18,5 +18,5 @@
       }
     }
   },
-  "tags": ["layer:shared", "type:utils"]
+  "tags": ["layer:shared", "scope:shared", "type:util"]
 }

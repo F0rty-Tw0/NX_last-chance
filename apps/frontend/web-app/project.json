@@ -110,5 +110,5 @@
     }
   },
   "implicitDependencies": ["frontend-shared-assets", "frontend-shared-styles", "shared-utils"],
-  "tags": ["layer:frontend", "domain:web-app", "type:app"]
+  "tags": ["layer:frontend", "scope:web-app", "type:app"]
 }

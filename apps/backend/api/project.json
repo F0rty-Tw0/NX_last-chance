@@ -53,5 +53,5 @@
     }
   },
   "implicitDependencies": ["shared-utils"],
-  "tags": ["layer:backend", "domain:api", "type:app"]
+  "tags": ["layer:backend", "scope:api", "type:app"]
 }

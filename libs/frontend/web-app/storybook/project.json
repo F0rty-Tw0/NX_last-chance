@@ -9,7 +9,11 @@
         "port": 4400,
         "configDir": "libs/frontend/web-app/storybook/.storybook",
         "browserTarget": "frontend-web-app-storybook:build-storybook",
-        "compodoc": false
+        "compodoc": false,
+        "styles": ["libs/frontend/shared/styles/src/index.scss"],
+        "stylePreprocessorOptions": {
+          "includePaths": ["libs/frontend/shared/styles/src"]
+        }
       },
       "configurations": {
         "ci": {
@@ -33,5 +37,6 @@
       }
     }
   },
-  "tags": []
+  "implicitDependencies": ["frontend-shared-assets", "frontend-shared-styles"],
+  "tags": ["layer:frontend", "scope:web-app", "type:storybook"]
 }

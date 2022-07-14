@@ -8,7 +8,8 @@ const config: StorybookConfig = {
 
   stories: [...rootMain.stories, '../../../**/*.stories.mdx', '../../../**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [...(rootMain.addons || [])],
-  // staticDirs: [{ from: '../../../../libs/frontend/shared/root/assets/src', to: '/assets' }],
+  // TODO: CHECK FOR THE CORRECT IMPORT
+  staticDirs: [{ from: '../../../shared/assets/src/lib', to: '/assets' }],
   webpackFinal: async (storyConfig, { configType }: Options) => {
     // apply any global webpack configs that might have been specified in .storybook/main.ts
     if (rootMain.webpackFinal) {
