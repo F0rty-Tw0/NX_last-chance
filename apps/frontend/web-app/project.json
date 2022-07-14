@@ -76,7 +76,10 @@
           "browserTarget": "frontend-web-app:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "options": {
+        "proxyConfig": "apps/frontend/web-app/proxy.conf.json"
+      }
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
@@ -106,5 +109,6 @@
       }
     }
   },
+  "implicitDependencies": ["frontend-shared-assets", "frontend-shared-styles", "shared-utils"],
   "tags": ["layer:frontend", "domain:web-app", "type:app"]
 }
