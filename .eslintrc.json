@@ -47,7 +47,7 @@
               },
               {
                 "sourceTag": "type:app",
-                "onlyDependOnLibsWithTags": ["type:shell", "type:util"]
+                "onlyDependOnLibsWithTags": ["type:shell", "type:core", "type:util"]
               },
               {
                 "sourceTag": "type:util",

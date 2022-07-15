@@ -55,6 +55,13 @@
       "configureCypress": false,
       "generateCypressSpecs": false,
       "tsConfiguration": true
+    },
+    "@nrwl/nest:library": {
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "strict": true,
+      "standaloneConfig": "true",
+      "target": "es2020"
     }
   },
   "defaultProject": "frontend-web-app"
