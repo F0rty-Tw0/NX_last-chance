@@ -31,6 +31,7 @@
   },
   "generators": {
     "@nrwl/angular:application": {
+      "directory": "frontend",
       "style": "scss",
       "linter": "eslint",
       "unitTestRunner": "jest",
@@ -39,6 +40,7 @@
       "standaloneConfig": "true"
     },
     "@nrwl/angular:library": {
+      "directory": "frontend",
       "linter": "eslint",
       "unitTestRunner": "jest",
       "strict": true,
@@ -57,11 +59,7 @@
       "tsConfiguration": true
     },
     "@nrwl/nest:library": {
-      "linter": "eslint",
-      "unitTestRunner": "jest",
-      "strict": true,
-      "standaloneConfig": "true",
-      "target": "es2020"
+      "directory": "backend"
     }
   },
   "defaultProject": "frontend-web-app"

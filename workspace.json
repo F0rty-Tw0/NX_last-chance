@@ -3,6 +3,7 @@
   "projects": {
     "backend-api": "apps/backend/api",
     "backend-api-core": "libs/backend/api/core",
+    "backend-api-shared-logger": "libs/backend/api/shared/logger",
     "frontend-shared-assets": "libs/frontend/shared/assets",
     "frontend-shared-styles": "libs/frontend/shared/styles",
     "frontend-web-app": "apps/frontend/web-app",
