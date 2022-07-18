@@ -19,15 +19,18 @@
             "depConstraints": [
               {
                 "sourceTag": "layer:frontend",
-                "onlyDependOnLibsWithTags": ["layer:frontend", "layer:shared"]
+                "onlyDependOnLibsWithTags": ["layer:frontend", "layer:shared"],
+                "bannedExternalImports": ["@nestjs/*"]
               },
               {
                 "sourceTag": "layer:backend",
-                "onlyDependOnLibsWithTags": ["layer:backend", "layer:shared"]
+                "onlyDependOnLibsWithTags": ["layer:backend", "layer:shared"],
+                "bannedExternalImports": ["@angular/*"]
               },
               {
                 "sourceTag": "layer:shared",
-                "onlyDependOnLibsWithTags": ["layer:shared"]
+                "onlyDependOnLibsWithTags": ["layer:shared"],
+                "bannedExternalImports": ["@angular/*", "@nestjs/*"]
               },
               {
                 "sourceTag": "scope:web-app",
@@ -47,15 +50,55 @@
               },
               {
                 "sourceTag": "type:app",
-                "onlyDependOnLibsWithTags": ["type:shell", "type:core", "type:util"]
+                "onlyDependOnLibsWithTags": ["type:shell", "type:core", "type:assets", "type:styles", "type:util"]
               },
               {
-                "sourceTag": "type:library",
-                "onlyDependOnLibsWithTags": ["type:domain-logic", "type:util"]
+                "sourceTag": "type:feature",
+                "onlyDependOnLibsWithTags": [
+                  "type:domain-logic",
+                  "type:data-access",
+                  "type:feature",
+                  "type:assets",
+                  "type:styles",
+                  "type:ui",
+                  "type:util"
+                ]
+              },
+              {
+                "sourceTag": "type:core",
+                "onlyDependOnLibsWithTags": ["type:domain-logic", "type:data-access", "type:feature", "type:util"]
+              },
+              {
+                "sourceTag": "type:api",
+                "onlyDependOnLibsWithTags": ["type:data-access", "type:domain-logic", "type:feature", "type:util"]
+              },
+              {
+                "sourceTag": "type:domain-logic",
+                "onlyDependOnLibsWithTags": ["type:domain-logic", "type:data-access", "type:util"]
+              },
+              {
+                "sourceTag": "type:ui",
+                "onlyDependOnLibsWithTags": ["type:ui", "type:assets", "type:styles", "type:util"]
+              },
+              {
+                "sourceTag": "type:data-access",
+                "onlyDependOnLibsWithTags": ["type:data-access", "type:util"]
+              },
+              {
+                "sourceTag": "type:shell",
+                "onlyDependOnLibsWithTags": ["type:feature", "type:util"]
               },
               {
                 "sourceTag": "type:util",
                 "onlyDependOnLibsWithTags": ["type:util"]
+              },
+              {
+                "sourceTag": "type:assets",
+                "onlyDependOnLibsWithTags": ["type:assets"]
+              },
+              {
+                "sourceTag": "type:styles",
+                "onlyDependOnLibsWithTags": ["type:styles", "type:assets"]
               },
               {
                 "sourceTag": "type:storybook",
@@ -66,8 +109,28 @@
                 "onlyDependOnLibsWithTags": ["domain:shared"]
               },
               {
-                "sourceTag": "domain:logger",
-                "onlyDependOnLibsWithTags": ["domain:logger", "domain:shared"]
+                "sourceTag": "domain:assets",
+                "onlyDependOnLibsWithTags": ["domain:assets"]
+              },
+              {
+                "sourceTag": "domain:styles",
+                "onlyDependOnLibsWithTags": ["domain:styles"]
+              },
+              {
+                "sourceTag": "domain:storybook",
+                "onlyDependOnLibsWithTags": ["domain:storybook"]
+              },
+              {
+                "sourceTag": "subdomain:core",
+                "onlyDependOnLibsWithTags": ["subdomain:core", "domain:shared"]
+              },
+              {
+                "sourceTag": "subdomain:logger",
+                "onlyDependOnLibsWithTags": ["subdomain:logger", "domain:shared"]
+              },
+              {
+                "sourceTag": "subdomain:error-handler",
+                "onlyDependOnLibsWithTags": ["subdomain:error-handler", "domain:shared"]
               }
             ]
           }

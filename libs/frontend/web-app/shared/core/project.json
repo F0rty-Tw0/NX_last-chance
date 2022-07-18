@@ -19,5 +19,5 @@
       }
     }
   },
-  "tags": ["layer:frontend", "scope:web-app", "domain:shared", "type:core"]
+  "tags": ["layer:frontend", "scope:web-app", "domain:shared", "subdomain:core", "type:core"]
 }

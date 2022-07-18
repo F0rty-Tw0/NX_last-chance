@@ -2,12 +2,13 @@
   "version": 2,
   "projects": {
     "backend-api": "apps/backend/api",
-    "backend-api-core": "libs/backend/api/core",
+    "backend-api-shared-core": "libs/backend/api/shared/core",
     "backend-api-shared-logger": "libs/backend/api/shared/logger",
     "frontend-shared-assets": "libs/frontend/shared/assets",
     "frontend-shared-styles": "libs/frontend/shared/styles",
     "frontend-web-app": "apps/frontend/web-app",
     "frontend-web-app-shared-core": "libs/frontend/web-app/shared/core",
+    "frontend-web-app-shared-error-handler": "libs/frontend/web-app/shared/error-handler",
     "frontend-web-app-shared-logger": "libs/frontend/web-app/shared/logger",
     "frontend-web-app-storybook": "libs/frontend/web-app/storybook",
     "shared-utils": "libs/shared/utils"

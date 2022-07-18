@@ -16,4 +16,4 @@ import { validationSchema } from './config/validations';
     }),
   ],
 })
-export class BackendApiCoreModule {}
+export class BackendApiSharedCoreModule {}

@@ -38,5 +38,5 @@
     }
   },
   "implicitDependencies": ["frontend-shared-assets", "frontend-shared-styles"],
-  "tags": ["layer:frontend", "scope:web-app", "type:storybook"]
+  "tags": ["layer:frontend", "scope:web-app", "domain:storybook", "type:storybook"]
 }

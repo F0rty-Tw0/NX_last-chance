@@ -1,23 +1,23 @@
 {
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/backend/api/shared/logger/src",
+  "sourceRoot": "libs/backend/api/shared/core/src",
   "projectType": "library",
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/backend/api/shared/logger/**/*.ts"]
+        "lintFilePatterns": ["libs/backend/api/shared/core/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/backend/api/shared/logger"],
+      "outputs": ["coverage/libs/backend/api/shared/core"],
       "options": {
-        "jestConfig": "libs/backend/api/shared/logger/jest.config.ts",
+        "jestConfig": "libs/backend/api/shared/core/jest.config.ts",
         "passWithNoTests": true
       }
     }
   },
-  "tags": ["layer:backend", "scope:api", "domain:shared", "subdomain:logger", "type:domain-logic"]
+  "tags": ["layer:backend", "scope:api", "domain:shared", "subdomain:core", "type:core"]
 }

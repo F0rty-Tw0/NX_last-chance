@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 
-import { BackendApiCoreModule } from '@last-chance/backend/api/core';
+import { BackendApiSharedCoreModule } from '@last-chance/backend/api/shared/core';
 
 @Module({
-  imports: [BackendApiCoreModule],
+  imports: [BackendApiSharedCoreModule],
 })
 export class AppModule {}

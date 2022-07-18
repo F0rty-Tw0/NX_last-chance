@@ -22,5 +22,5 @@
       }
     }
   },
-  "tags": ["layer:frontend", "scope:web-app", "domain:shared", "type:library"]
+  "tags": ["layer:frontend", "scope:web-app", "domain:shared", "subdomain:logger", "type:domain-logic"]
 }

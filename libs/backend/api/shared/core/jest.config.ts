@@ -1,7 +1,7 @@
 /* eslint-disable */
 export default {
-  displayName: 'backend-api-core',
-  preset: '../../../../jest.preset.js',
+  displayName: 'backend-api-shared-core',
+  preset: '../../../../../jest.preset.js',
   globals: {
     'ts-jest': {
       tsconfig: '<rootDir>/tsconfig.spec.json',
@@ -12,5 +12,5 @@ export default {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../../../coverage/libs/backend/api/core',
+  coverageDirectory: '../../../../../coverage/libs/backend/api/shared/core',
 };
