@@ -12,9 +12,10 @@
   "scripts": {
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2020 browser module main",
-    "lint": "nx affected --target=lint --parallel=5",
-    "stylelint": "nx affected --target=stylelint --parallel=5",
-    "test": "nx affected --target=test --parallel=5 --ci",
+    "lint": "nx affected --target=lint --parallel=3",
+    "stylelint": "nx affected --target=stylelint --parallel=3",
+    "test": "nx affected --target=test --parallel=3 --ci",
+    "write": "nx format --target=write --parallel=3",
     "start:web-app": "nx serve frontend-web-app --open",
     "start:api": "nx serve backend-api",
     "build": "nx build"
@@ -29,6 +30,7 @@
     "@angular/platform-browser": "~14.0.0",
     "@angular/platform-browser-dynamic": "~14.0.0",
     "@angular/router": "~14.0.0",
+    "@datadog/browser-logs": "^4.15.0",
     "@nestjs/common": "^8.0.0",
     "@nestjs/config": "^2.2.0",
     "@nestjs/core": "^8.0.0",

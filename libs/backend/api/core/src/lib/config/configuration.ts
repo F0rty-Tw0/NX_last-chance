@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/dot-notation */
 type ConfigurationType = {
   environment?: string;
   port: number;

@@ -12,5 +12,5 @@
     }
   },
   "implicitDependencies": ["frontend-shared-assets"],
-  "tags": ["layer:frontend", "domain:shared", "type:styles"]
+  "tags": ["layer:frontend", "scope:shared", "type:styles"]
 }

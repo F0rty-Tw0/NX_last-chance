@@ -31,18 +31,18 @@
   },
   "generators": {
     "@nrwl/angular:application": {
-      "directory": "frontend",
       "style": "scss",
       "linter": "eslint",
       "unitTestRunner": "jest",
       "e2eTestRunner": "none",
+      "directory": "frontend",
       "strict": true,
       "standaloneConfig": "true"
     },
     "@nrwl/angular:library": {
-      "directory": "frontend",
       "linter": "eslint",
       "unitTestRunner": "jest",
+      "directory": "frontend",
       "strict": true,
       "standaloneConfig": "true"
     },

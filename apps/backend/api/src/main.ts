@@ -2,6 +2,7 @@ import { Logger, VersioningType } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import { Logger as PinoLogger } from 'nestjs-pino';
+
 import { AppModule } from './app/app.module';
 
 async function bootstrap(): Promise<void> {
