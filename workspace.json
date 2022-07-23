@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "backend-api": "apps/backend/api",
+    "backend-api-shared-cache": "libs/backend/api/shared/cache",
     "backend-api-shared-core": "libs/backend/api/shared/core",
     "backend-api-shared-logger": "libs/backend/api/shared/logger",
     "frontend-shared-assets": "libs/frontend/shared/assets",

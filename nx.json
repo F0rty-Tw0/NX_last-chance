@@ -59,7 +59,8 @@
       "tsConfiguration": true
     },
     "@nrwl/nest:library": {
-      "directory": "backend"
+      "directory": "backend",
+      "strict": true
     }
   },
   "defaultProject": "frontend-web-app"

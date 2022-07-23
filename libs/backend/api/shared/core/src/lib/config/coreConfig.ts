@@ -1,4 +1,4 @@
-type ConfigurationType = {
+type CoreConfigType = {
   environment?: string;
   port: number;
 };
@@ -10,7 +10,7 @@ declare const process: {
   };
 };
 
-export const configuration = (): ConfigurationType => ({
+export const coreConfig = (): CoreConfigType => ({
   environment: process.env.NODE_ENV,
   port: parseInt(process.env.PORT || '3000', 10),
 });
