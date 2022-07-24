@@ -1,0 +1,23 @@
+{
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/backend/api/shared/error-handler/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/backend/api/shared/error-handler/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/backend/api/shared/error-handler"],
+      "options": {
+        "jestConfig": "libs/backend/api/shared/error-handler/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["layer:backend", "scope:api", "domain:shared", "subdomain:error-handler", "type:domain-logic"]
+}

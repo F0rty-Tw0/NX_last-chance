@@ -4,6 +4,7 @@
     "backend-api": "apps/backend/api",
     "backend-api-shared-cache": "libs/backend/api/shared/cache",
     "backend-api-shared-core": "libs/backend/api/shared/core",
+    "backend-api-shared-error-handler": "libs/backend/api/shared/error-handler",
     "backend-api-shared-logger": "libs/backend/api/shared/logger",
     "frontend-shared-assets": "libs/frontend/shared/assets",
     "frontend-shared-styles": "libs/frontend/shared/styles",

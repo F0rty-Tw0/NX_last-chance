@@ -23,6 +23,7 @@
     "paths": {
       "@last-chance/backend/api/shared/cache": ["libs/backend/api/shared/cache/src/index.ts"],
       "@last-chance/backend/api/shared/core": ["libs/backend/api/shared/core/src/index.ts"],
+      "@last-chance/backend/api/shared/error-handler": ["libs/backend/api/shared/error-handler/src/index.ts"],
       "@last-chance/backend/api/shared/logger": ["libs/backend/api/shared/logger/src/index.ts"],
       "@last-chance/frontend/shared/assets": ["libs/frontend/shared/assets/src/index.ts"],
       "@last-chance/frontend/shared/styles": ["libs/frontend/shared/styles/src/index.ts"],

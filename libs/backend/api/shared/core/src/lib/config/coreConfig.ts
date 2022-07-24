@@ -1,6 +1,6 @@
 type CoreConfigType = {
-  environment?: string;
-  port: number;
+  NODE_ENV: string;
+  PORT: number;
 };
 
 declare const process: {
@@ -11,6 +11,6 @@ declare const process: {
 };
 
 export const coreConfig = (): CoreConfigType => ({
-  environment: process.env.NODE_ENV,
-  port: parseInt(process.env.PORT || '3000', 10),
+  NODE_ENV: process.env.NODE_ENV,
+  PORT: parseInt(process.env.PORT || '3000', 10),
 });
