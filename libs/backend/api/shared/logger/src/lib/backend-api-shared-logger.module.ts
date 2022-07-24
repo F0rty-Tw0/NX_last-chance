@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { LoggerModule } from 'nestjs-pino';
 
-import { loggerConfig } from './utils/backend-api-logger.config';
+import { backendLogger } from './utils/backend-api-logger.config';
 
 @Module({
   imports: [
@@ -14,7 +14,7 @@ import { loggerConfig } from './utils/backend-api-logger.config';
             name: 'Backend Api',
             level: configService.get('NODE_ENV') === 'development' ? 'info' : 'debug',
           },
-          loggerConfig,
+          backendLogger,
         ],
       }),
       inject: [ConfigService],

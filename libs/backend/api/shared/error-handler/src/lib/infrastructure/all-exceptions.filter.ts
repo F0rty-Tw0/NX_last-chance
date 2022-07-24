@@ -4,7 +4,7 @@ import { FastifyReply, FastifyRequest } from 'fastify';
 import { CustomHttpExceptionResponse, HttpExceptionResponse } from '../entities/http-exception-response.interface';
 import { getErrorResponse } from '../utils/error-response.util';
 
-@Catch(HttpException)
+@Catch()
 export class AllExceptionsFilter implements ExceptionFilter {
   private readonly logger = new Logger(AllExceptionsFilter.name);
 

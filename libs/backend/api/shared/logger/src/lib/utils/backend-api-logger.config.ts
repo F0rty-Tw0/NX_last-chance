@@ -23,4 +23,4 @@ const prettyPrint = printerFactory({
   translateTime: 'SYS:dd-mm-yyyy HH:MM:ss',
 }) as NodeJS.WritableStream;
 
-export const loggerConfig = isDev ? prettyPrint : datadogStream;
+export const backendLogger = isDev ? prettyPrint : datadogStream;
