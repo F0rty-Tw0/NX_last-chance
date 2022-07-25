@@ -141,8 +141,16 @@
                 "onlyDependOnLibsWithTags": ["subdomain:web-api", "domain:shared"]
               },
               {
+                "sourceTag": "subdomain:error-handler",
+                "onlyDependOnLibsWithTags": ["subdomain:error-handler", "domain:shared"]
+              },
+              {
                 "sourceTag": "subdomain:exception-filters",
                 "onlyDependOnLibsWithTags": ["subdomain:exception-filters", "domain:shared"]
+              },
+              {
+                "sourceTag": "subdomain:preloading-strategies",
+                "onlyDependOnLibsWithTags": ["subdomain:preloading-strategies", "domain:shared"]
               }
             ]
           }
