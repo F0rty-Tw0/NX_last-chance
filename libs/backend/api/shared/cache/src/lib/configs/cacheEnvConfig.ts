@@ -1,12 +1,5 @@
 import { registerAs } from '@nestjs/config';
 
-export type CacheEnvConfigType = {
-  REDIS_ENDPOINT: string;
-  REDIS_PASSWORD: string;
-  REDIS_PORT: number;
-  REDIS_TTL: number;
-};
-
 declare const process: {
   env: {
     REDIS_ENDPOINT: string;
@@ -14,6 +7,13 @@ declare const process: {
     REDIS_PASSWORD: string;
     REDIS_TTL: string;
   };
+};
+
+export type CacheEnvConfigType = {
+  REDIS_ENDPOINT: string;
+  REDIS_PASSWORD: string;
+  REDIS_PORT: number;
+  REDIS_TTL: number;
 };
 
 export default registerAs(

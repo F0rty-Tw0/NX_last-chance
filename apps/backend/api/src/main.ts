@@ -9,7 +9,7 @@ import { AppModule } from './app/app.module';
 async function bootstrap(): Promise<void> {
   const app = await NestFactory.create<NestFastifyApplication>(AppModule, new FastifyAdapter());
   const configService = app.get(ConfigService);
-  const port = configService.get('PORT') || 3333;
+  const port = configService.get<number>('PORT') || 3333;
   const logger = new Logger('Backend Api');
 
   app.enableCors();
@@ -23,7 +23,7 @@ async function bootstrap(): Promise<void> {
 
   await app.listen(port);
   logger.log(`🚀 Application is running on: http://localhost:${port}/${globalPrefix}`);
-  logger.log(`🚀 Running in ${configService.get('environment')} mode`);
+  logger.log(`🚀 Running in ${configService.get<string>('NODE_ENV')} mode`);
 }
 
 bootstrap();

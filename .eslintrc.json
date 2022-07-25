@@ -141,6 +141,10 @@
                 "onlyDependOnLibsWithTags": ["subdomain:web-api", "domain:shared"]
               },
               {
+                "sourceTag": "subdomain:telegram-bot",
+                "onlyDependOnLibsWithTags": ["subdomain:telegram-bot", "domain:shared"]
+              },
+              {
                 "sourceTag": "subdomain:error-handler",
                 "onlyDependOnLibsWithTags": ["subdomain:error-handler", "domain:shared"]
               },

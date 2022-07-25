@@ -6,6 +6,7 @@
     "backend-api-shared-core": "libs/backend/api/shared/core",
     "backend-api-shared-exception-filters": "libs/backend/api/shared/exception-filters",
     "backend-api-shared-logger": "libs/backend/api/shared/logger",
+    "backend-api-shared-telegram-bot": "libs/backend/api/shared/telegram-bot",
     "backend-api-shared-web-api": "libs/backend/api/shared/web-api",
     "frontend-shared-assets": "libs/frontend/shared/assets",
     "frontend-shared-styles": "libs/frontend/shared/styles",

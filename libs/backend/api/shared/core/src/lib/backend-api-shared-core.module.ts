@@ -5,18 +5,21 @@ import { BackendApiSharedLoggerModule } from '@last-chance/backend/api/shared/lo
 import { BackendApiSharedCacheModule } from '@last-chance/backend/api/shared/cache';
 import { BackendApiSharedExceptionFiltersModule } from '@last-chance/backend/api/shared/exception-filters';
 
-import { coreConfig } from './config/coreConfig';
-import { coreConfigValidationSchema } from './config/coreConfigValidations';
+import { coreEnvConfig } from './configs/coreEnvConfig';
+import { coreEnvConfigValidationSchema } from './configs/coreEnvConfigValidations';
+
+import { DummyController } from './dummy.controller';
 
 @Module({
+  controllers: [DummyController],
   imports: [
     BackendApiSharedLoggerModule,
     BackendApiSharedCacheModule,
     BackendApiSharedExceptionFiltersModule,
     ConfigModule.forRoot({
       isGlobal: true,
-      load: [coreConfig],
-      validationSchema: coreConfigValidationSchema,
+      load: [coreEnvConfig],
+      validationSchema: coreEnvConfigValidationSchema,
     }),
   ],
 })
