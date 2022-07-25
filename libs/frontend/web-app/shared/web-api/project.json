@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/frontend/web-app/shared/web-api/src",
+  "prefix": "last-chance",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/frontend/web-app/shared/web-api"],
+      "options": {
+        "jestConfig": "libs/frontend/web-app/shared/web-api/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/frontend/web-app/shared/web-api/**/*.ts",
+          "libs/frontend/web-app/shared/web-api/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["layer:frontend", "scope:web-app", "domain:shared", "subdomain:web-api", "type:domain-logic"]
+}

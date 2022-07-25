@@ -1,5 +1,6 @@
 export const environment = {
   production: false,
+  apiUrl: 'http://localhost:3000',
   datadog: {
     clientToken: 'pub99bf262ce7b7aa25e7f3aa1edd2dcff7',
     site: 'datadoghq.com',
