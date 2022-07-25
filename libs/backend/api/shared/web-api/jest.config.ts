@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'backend-api-shared-error-handler',
+  displayName: 'backend-api-shared-web-api',
   preset: '../../../../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -12,5 +12,5 @@ export default {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../../../../coverage/libs/backend/api/shared/error-handler',
+  coverageDirectory: '../../../../../coverage/libs/backend/api/shared/web-api',
 };

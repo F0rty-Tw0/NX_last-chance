@@ -7,7 +7,7 @@ import { ErrorHandlerFacade } from '../application/error-handler.facade';
 
 @Injectable()
 export class GlobalErrorHandler implements ErrorHandler {
-  constructor(private injector: Injector) {}
+  constructor(private readonly injector: Injector) {}
 
   handleError(error: Error | HttpErrorResponse): void {
     const errorFacade = this.injector.get(ErrorHandlerFacade);

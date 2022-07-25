@@ -7,7 +7,7 @@ import { ILogger } from '../entities/logger.interface';
 
 @Injectable({ providedIn: 'root' })
 export class LoggerFacade implements ILogger {
-  constructor(private loggerService: LoggerService) {}
+  constructor(private readonly loggerService: LoggerService) {}
 
   public debug<T>(message: string, context?: ILoggerContext<T>): void {
     this.loggerService.debug(message, context);

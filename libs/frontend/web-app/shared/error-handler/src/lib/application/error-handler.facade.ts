@@ -7,7 +7,7 @@ import { IErrorHandler } from '../entities/error-handler.interface';
 
 @Injectable({ providedIn: 'root' })
 export class ErrorHandlerFacade implements IErrorHandler {
-  constructor(private errorHandlerService: ErrorHandlerService) {}
+  constructor(private readonly errorHandlerService: ErrorHandlerService) {}
 
   getClientMessage(error: unknown): string {
     return this.errorHandlerService.getClientMessage(error);

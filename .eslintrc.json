@@ -19,12 +19,20 @@
             "depConstraints": [
               {
                 "sourceTag": "layer:frontend",
-                "onlyDependOnLibsWithTags": ["layer:frontend", "layer:shared"],
+                "bannedExternalImports": ["@nestjs/*"],
+                "onlyDependOnLibsWithTags": ["layer:frontend", "layer:shared"]
+              },
+              {
+                "sourceTag": "layer:backend",
+                "bannedExternalImports": ["@angular/*"],
+                "onlyDependOnLibsWithTags": ["layer:backend", "layer:shared"]
+              },
+              {
+                "sourceTag": "layer:frontend",
                 "bannedExternalImports": ["@nestjs/*"]
               },
               {
                 "sourceTag": "layer:backend",
-                "onlyDependOnLibsWithTags": ["layer:backend", "layer:shared"],
                 "bannedExternalImports": ["@angular/*"]
               },
               {
@@ -129,8 +137,12 @@
                 "onlyDependOnLibsWithTags": ["subdomain:logger", "domain:shared"]
               },
               {
-                "sourceTag": "subdomain:error-handler",
-                "onlyDependOnLibsWithTags": ["subdomain:error-handler", "domain:shared"]
+                "sourceTag": "subdomain:web-api",
+                "onlyDependOnLibsWithTags": ["subdomain:web-api", "domain:shared"]
+              },
+              {
+                "sourceTag": "subdomain:exception-filters",
+                "onlyDependOnLibsWithTags": ["subdomain:exception-filters", "domain:shared"]
               }
             ]
           }

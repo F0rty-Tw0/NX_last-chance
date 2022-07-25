@@ -6,4 +6,4 @@ import { AllExceptionsFilter } from './infrastructure/all-exceptions.filter';
 @Module({
   providers: [AllExceptionsFilter, { provide: APP_FILTER, useClass: AllExceptionsFilterFacade }],
 })
-export class BackendApiSharedErrorHandlerModule {}
+export class BackendApiSharedExceptionFiltersModule {}
