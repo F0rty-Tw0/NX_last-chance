@@ -7,7 +7,7 @@ import { IErrorHandler } from '../entities/error-handler.interface';
 @Injectable()
 export class ErrorHandlerService implements IErrorHandler {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  getClientMessage(error: any): string {
+  public getClientMessage(error: any): string {
     if (!navigator.onLine) {
       return 'No Internet Connection';
     }
@@ -18,15 +18,15 @@ export class ErrorHandlerService implements IErrorHandler {
     return error.message ? error.message : error.toString();
   }
 
-  getClientStack(error: Error): string | undefined {
+  public getClientStack(error: Error): string | undefined {
     return error.stack;
   }
 
-  getServerMessage(error: HttpErrorResponse): string {
+  public getServerMessage(error: HttpErrorResponse): string {
     return error.message;
   }
 
-  getServerStack(error: HttpErrorResponse): string {
+  public getServerStack(error: HttpErrorResponse): string {
     return error.statusText;
   }
 }

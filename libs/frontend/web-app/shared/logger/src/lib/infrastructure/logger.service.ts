@@ -9,9 +9,7 @@ import { ILoggerContext } from '../entities/logger-context.interface';
 
 @Injectable()
 export class LoggerService implements ILogger {
-  private initialized = false;
-
-  constructor() {
+  public constructor() {
     if (environment?.datadog.clientToken && environment?.production) {
       datadogLogs.init({
         clientToken: environment.datadog.clientToken,
@@ -23,6 +21,8 @@ export class LoggerService implements ILogger {
       this.initialized = true;
     }
   }
+
+  private initialized = false;
 
   public debug<T>(message: string, context?: ILoggerContext<T>): void {
     if (this.initialized) {

@@ -5,11 +5,11 @@ import { mergeMap, delay, retryWhen } from 'rxjs/operators';
 
 @Injectable()
 export class ServerErrorInterceptor implements HttpInterceptor {
-  maxRetries = 2;
+  private readonly maxRetries = 2;
 
-  delayMs = 2000;
+  private readonly delayMs = 2000;
 
-  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+  public intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     return next.handle(request).pipe(
       retryWhen((error$) =>
         error$.pipe(

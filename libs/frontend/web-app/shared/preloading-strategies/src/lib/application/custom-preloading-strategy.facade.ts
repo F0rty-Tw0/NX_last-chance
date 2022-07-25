@@ -9,10 +9,10 @@ import { CustomPreloadingStrategyService } from '../infrastructure/custom-preloa
   providedIn: 'root',
 })
 export class CustomPreloadingStrategyFacade implements PreloadingStrategy {
-  constructor(private customPreloadingStrategyService: CustomPreloadingStrategyService) {}
+  public constructor(private readonly customPreloadingStrategyService: CustomPreloadingStrategyService) {}
 
   // eslint-disable-next-line rxjs/finnish
-  preload(route: IRoute, fn: () => Observable<unknown>): Observable<unknown> {
+  public preload(route: IRoute, fn: () => Observable<unknown>): Observable<unknown> {
     return this.customPreloadingStrategyService.preload(route, fn);
   }
 }

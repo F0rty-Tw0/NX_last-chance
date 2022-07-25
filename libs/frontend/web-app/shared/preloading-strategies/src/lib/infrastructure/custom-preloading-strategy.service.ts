@@ -8,7 +8,7 @@ import { IRoute } from '../entities/route.interface';
 @Injectable()
 export class CustomPreloadingStrategyService implements PreloadingStrategy {
   // eslint-disable-next-line rxjs/finnish, class-methods-use-this
-  preload(route: IRoute, fn: () => Observable<unknown>): Observable<unknown> {
+  public preload(route: IRoute, fn: () => Observable<unknown>): Observable<unknown> {
     const loadRoute = (delayMS: number): Observable<unknown> =>
       delayMS > 0 ? timer(delayMS).pipe(map(() => fn())) : fn();
 

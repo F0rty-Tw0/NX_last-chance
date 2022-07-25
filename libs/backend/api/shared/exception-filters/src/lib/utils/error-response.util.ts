@@ -9,7 +9,7 @@ export const getErrorResponse = (
 ): CustomHttpExceptionResponse => ({
   status,
   message,
-  timestamp: new Date().toISOString(),
+  timeStamp: new Date().toISOString(),
   path: request.url,
   method: request.method,
 });

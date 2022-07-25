@@ -6,17 +6,17 @@ import { WebApiService } from '../infrastructure/web-api.service';
 
 @Injectable()
 export class WebApiFacade {
-  constructor(private readonly webApiService: WebApiService) {}
+  public constructor(private readonly webApiService: WebApiService) {}
 
-  get$<T>(url: string, options?: AxiosRequestConfig): Observable<AxiosResponse<T>> {
+  public get$<T>(url: string, options?: AxiosRequestConfig): Observable<AxiosResponse<T>> {
     return this.webApiService.get$(url, options);
   }
 
-  post$<T>(url: string, body?: T, options?: AxiosRequestConfig): Observable<AxiosResponse<T>> {
+  public post$<T>(url: string, body?: T, options?: AxiosRequestConfig): Observable<AxiosResponse<T>> {
     return this.webApiService.post$(url, body, options);
   }
 
-  put$<T>(url: string, body?: T, options?: AxiosRequestConfig): Observable<AxiosResponse<T>> {
+  public put$<T>(url: string, body?: T, options?: AxiosRequestConfig): Observable<AxiosResponse<T>> {
     return this.webApiService.put$(url, body, options);
   }
 }

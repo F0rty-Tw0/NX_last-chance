@@ -7,21 +7,21 @@ import { IErrorHandler } from '../entities/error-handler.interface';
 
 @Injectable({ providedIn: 'root' })
 export class ErrorHandlerFacade implements IErrorHandler {
-  constructor(private readonly errorHandlerService: ErrorHandlerService) {}
+  public constructor(private readonly errorHandlerService: ErrorHandlerService) {}
 
-  getClientMessage(error: unknown): string {
+  public getClientMessage(error: unknown): string {
     return this.errorHandlerService.getClientMessage(error);
   }
 
-  getClientStack(error: Error): string | undefined {
+  public getClientStack(error: Error): string | undefined {
     return this.errorHandlerService.getClientStack(error);
   }
 
-  getServerMessage(error: HttpErrorResponse): string {
+  public getServerMessage(error: HttpErrorResponse): string {
     return this.errorHandlerService.getServerMessage(error);
   }
 
-  getServerStack(error: HttpErrorResponse): string {
+  public getServerStack(error: HttpErrorResponse): string {
     return this.errorHandlerService.getServerStack(error);
   }
 }
