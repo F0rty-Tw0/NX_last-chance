@@ -19,5 +19,5 @@
       }
     }
   },
-  "tags": ["layer:backend", "scope:api", "domain:shared", "subdomain:web-api", "type:domain-logic"]
+  "tags": ["layer:backend", "scope:api", "domain:shared", "subdomain:web-api", "type:data-access"]
 }

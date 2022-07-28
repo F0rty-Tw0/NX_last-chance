@@ -129,6 +129,10 @@
                 "onlyDependOnLibsWithTags": ["domain:storybook"]
               },
               {
+                "sourceTag": "domain:salling",
+                "onlyDependOnLibsWithTags": ["domain:salling", "domain:shared"]
+              },
+              {
                 "sourceTag": "subdomain:core",
                 "onlyDependOnLibsWithTags": ["subdomain:core", "domain:shared"]
               },

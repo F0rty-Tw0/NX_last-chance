@@ -1,0 +1,1 @@
+export const PINO_CONFIG_TOKEN = 'PINO_CONFIG_TOKEN';

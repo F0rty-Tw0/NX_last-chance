@@ -59,8 +59,7 @@
       "tsConfiguration": true
     },
     "@nrwl/nest:library": {
-      "directory": "backend",
-      "target": "es2020"
+      "directory": "backend"
     }
   },
   "defaultProject": "frontend-web-app"

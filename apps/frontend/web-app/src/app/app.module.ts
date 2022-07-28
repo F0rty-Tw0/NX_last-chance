@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 
-import { FrontendWebAppSharedCoreModule } from '@last-chance/frontend/web-app/shared/core';
+import { FrontendWebAppShellModule } from '@last-chance/frontend/web-app/shell';
 
 import { AppComponent } from './app.component';
 
 @NgModule({
-  imports: [FrontendWebAppSharedCoreModule],
+  imports: [FrontendWebAppShellModule],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
 })

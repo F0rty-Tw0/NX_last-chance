@@ -25,7 +25,7 @@ export class AllExceptionsFilter implements ExceptionFilter {
       errorMessage = (errorResponse as HttpExceptionResponse).message || exception.message;
     } else {
       status = HttpStatus.INTERNAL_SERVER_ERROR;
-      errorMessage = 'Critical internal server Error occurred!';
+      errorMessage = 'Critical internal server Error occurred';
     }
 
     const customErrorResponse: CustomHttpExceptionResponse = getErrorResponse(status, errorMessage, request);

@@ -1,22 +1,15 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { LoggerModule } from 'nestjs-pino';
+import { LoggerModule, Params } from 'nestjs-pino';
+import pinoConfig from './configs/pino.config';
 
-import { backendLogger } from './utils/backend-api-logger.config';
+import { PINO_CONFIG_TOKEN } from './configs/pino.token';
 
 @Module({
   imports: [
     LoggerModule.forRootAsync({
-      imports: [ConfigModule],
-      useFactory: async (configService: ConfigService) => ({
-        pinoHttp: [
-          {
-            name: 'Backend Api',
-            level: configService.get('NODE_ENV') === 'development' ? 'info' : 'debug',
-          },
-          backendLogger,
-        ],
-      }),
+      imports: [ConfigModule.forFeature(pinoConfig)],
+      useFactory: async (configService: ConfigService) => configService.get<Params>(PINO_CONFIG_TOKEN) || {},
       inject: [ConfigService],
     }),
   ],

@@ -2,11 +2,12 @@ import { Injectable } from '@nestjs/common';
 
 import { TelegramBotWebApiFacade } from '../application/telegram-bot-web-api.facade';
 
+import { ITelegramBot } from '../entities/bridges/telegram-bot.interface';
 import { ITelegramMessagePayload } from '../entities/telegram-message-payload.interface';
 import { TelegramParseModes } from '../entities/telegram-parse-modes.enum';
 
 @Injectable()
-export class TelegramBotService {
+export class TelegramBotService implements ITelegramBot {
   public constructor(private readonly telegramBotWebApiFacade: TelegramBotWebApiFacade) {}
 
   public sendMessage(chatId: string, message: string, parseMode?: TelegramParseModes): void {

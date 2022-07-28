@@ -1,12 +1,26 @@
 import { HttpModule } from '@nestjs/axios';
-import { Module } from '@nestjs/common';
+import { DynamicModule, Module } from '@nestjs/common';
+import { AxiosRequestConfig } from 'axios';
 
 import { WebApiFacade } from './application/web-api.facade';
 import { WebApiService } from './infrastructure/web-api.service';
 
-@Module({
-  imports: [HttpModule],
-  providers: [WebApiService, WebApiFacade],
-  exports: [WebApiFacade],
-})
-export class BackendApiSharedWebApiModule {}
+@Module({})
+export class BackendApiSharedWebApiModule {
+  public static registerAsync(options: {
+    imports?: any[];
+    useFactory?: (...args: any[]) => AxiosRequestConfig;
+    inject?: any[];
+  }): DynamicModule {
+    return {
+      module: BackendApiSharedWebApiModule,
+      imports: [
+        HttpModule.registerAsync({
+          ...options,
+        }),
+      ],
+      providers: [WebApiFacade, WebApiService],
+      exports: [WebApiFacade, WebApiService],
+    };
+  }
+}
