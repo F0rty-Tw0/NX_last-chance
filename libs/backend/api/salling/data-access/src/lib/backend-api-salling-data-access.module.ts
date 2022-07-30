@@ -1,8 +1,10 @@
-import { BackendApiSharedWebApiModule } from '@last-chance/backend/api/shared/web-api';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { Module } from '@nestjs/common';
 
+import { BackendApiSharedWebApiModule } from '@last-chance/backend/api/shared/web-api';
+
 import { SallingApiService } from './infrastructure/salling-api.service';
+import { SallingApiFacade } from './application/salling-api.facade';
 
 import sallingConfig, { SallingConfigType } from './configs/salling.config';
 import { SALLING_GROUP_CONFIG_TOKEN } from './configs/salling.token';
@@ -18,7 +20,7 @@ import { SALLING_GROUP_CONFIG_TOKEN } from './configs/salling.token';
     }),
     ConfigModule.forFeature(sallingConfig),
   ],
-  providers: [SallingApiService],
-  exports: [SallingApiService],
+  providers: [SallingApiService, SallingApiFacade],
+  exports: [SallingApiFacade],
 })
-export class BackendApiSallingSallingApiModule {}
+export class BackendApiSallingDataAccessModule {}

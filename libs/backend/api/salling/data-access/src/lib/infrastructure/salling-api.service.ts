@@ -14,13 +14,20 @@ import {
 
 import { ISallingFoodWaste } from '../entities/salling-api-response.interface';
 import { IGeoCoordinates } from '../entities/salling-store/salling-store.entity';
+import { ISallingApi } from '../entities/salling-api.interface';
 
 @Injectable()
-export class SallingApiService {
+export class SallingApiService implements ISallingApi {
   public constructor(private readonly configService: ConfigService, private readonly webApiFacade: WebApiFacade) {}
 
   private readonly foodWasteUrl =
     this.configService.get<SallingConfigType>(SALLING_GROUP_CONFIG_TOKEN)?.sallingLinks.foodWaste || '';
+
+  private getSallingFoodWaste$(params: SallingApiParamsType): Observable<ISallingFoodWaste[]> {
+    return this.webApiFacade
+      .get$<ISallingFoodWaste[]>(this.foodWasteUrl, { params })
+      .pipe(map((response) => response.data));
+  }
 
   public getSallingFoodWasteByZip$(zip: string, radius?: number): Observable<ISallingFoodWaste[]> {
     const params: ISallingApiZipParams = {
@@ -43,12 +50,6 @@ export class SallingApiService {
   public getSallingFoodWasteById$(id: string): Observable<ISallingFoodWaste> {
     return this.webApiFacade
       .get$<ISallingFoodWaste>(`${this.foodWasteUrl}/${id}`)
-      .pipe(map((response) => response.data));
-  }
-
-  private getSallingFoodWaste$(params: SallingApiParamsType): Observable<ISallingFoodWaste[]> {
-    return this.webApiFacade
-      .get$<ISallingFoodWaste[]>(this.foodWasteUrl, { params })
       .pipe(map((response) => response.data));
   }
 }

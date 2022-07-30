@@ -37,8 +37,8 @@
               },
               {
                 "sourceTag": "layer:shared",
-                "onlyDependOnLibsWithTags": ["layer:shared"],
-                "bannedExternalImports": ["@angular/*", "@nestjs/*"]
+                "bannedExternalImports": ["@angular/*", "@nestjs/*"],
+                "onlyDependOnLibsWithTags": ["layer:shared"]
               },
               {
                 "sourceTag": "scope:web-app",
@@ -131,6 +131,10 @@
               {
                 "sourceTag": "domain:salling",
                 "onlyDependOnLibsWithTags": ["domain:salling", "domain:shared"]
+              },
+              {
+                "sourceTag": "domain:geo-location",
+                "onlyDependOnLibsWithTags": ["domain:geo-location", "domain:shared"]
               },
               {
                 "sourceTag": "subdomain:core",

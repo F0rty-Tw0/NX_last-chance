@@ -2,8 +2,11 @@
   "version": 2,
   "projects": {
     "backend-api": "apps/backend/api",
+    "backend-api-geo-location-data-access": "libs/backend/api/geo-location/data-access",
+    "backend-api-geo-location-domain": "libs/backend/api/geo-location/domain",
+    "backend-api-geo-location-feature": "libs/backend/api/geo-location/feature",
+    "backend-api-salling-data-access": "libs/backend/api/salling/data-access",
     "backend-api-salling-domain": "libs/backend/api/salling/domain",
-    "backend-api-salling-salling-api": "libs/backend/api/salling/salling-api",
     "backend-api-shared-cache": "libs/backend/api/shared/cache",
     "backend-api-shared-exception-filters": "libs/backend/api/shared/exception-filters",
     "backend-api-shared-logger": "libs/backend/api/shared/logger",

@@ -1,20 +1,20 @@
 {
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/backend/api/salling/salling-api/src",
+  "sourceRoot": "libs/backend/api/salling/data-access/src",
   "projectType": "library",
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/backend/api/salling/salling-api/**/*.ts"]
+        "lintFilePatterns": ["libs/backend/api/salling/data-access/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/backend/api/salling/salling-api"],
+      "outputs": ["coverage/libs/backend/api/salling/data-access"],
       "options": {
-        "jestConfig": "libs/backend/api/salling/salling-api/jest.config.ts",
+        "jestConfig": "libs/backend/api/salling/data-access/jest.config.ts",
         "passWithNoTests": true
       }
     }

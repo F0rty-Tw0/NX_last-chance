@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'backend-api-salling-salling-api',
+  displayName: 'backend-api-geo-location-domain',
   preset: '../../../../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -12,5 +12,5 @@ export default {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../../../../coverage/libs/backend/api/salling/salling-api',
+  coverageDirectory: '../../../../../coverage/libs/backend/api/geo-location/domain',
 };

@@ -21,8 +21,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@last-chance/backend/api/geo-location/data-access": ["libs/backend/api/geo-location/data-access/src/index.ts"],
+      "@last-chance/backend/api/geo-location/domain": ["libs/backend/api/geo-location/domain/src/index.ts"],
+      "@last-chance/backend/api/geo-location/feature": ["libs/backend/api/geo-location/feature/src/index.ts"],
+      "@last-chance/backend/api/salling/data-access": ["libs/backend/api/salling/data-access/src/index.ts"],
       "@last-chance/backend/api/salling/domain": ["libs/backend/api/salling/domain/src/index.ts"],
-      "@last-chance/backend/api/salling/salling-api": ["libs/backend/api/salling/salling-api/src/index.ts"],
       "@last-chance/backend/api/shared/cache": ["libs/backend/api/shared/cache/src/index.ts"],
       "@last-chance/backend/api/shared/exception-filters": ["libs/backend/api/shared/exception-filters/src/index.ts"],
       "@last-chance/backend/api/shared/logger": ["libs/backend/api/shared/logger/src/index.ts"],
