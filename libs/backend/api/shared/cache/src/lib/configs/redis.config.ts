@@ -20,6 +20,6 @@ export default registerAs(
     host: process.env.REDIS_ENDPOINT || 'localhost',
     password: process.env.REDIS_PASSWORD || '',
     port: parseInt(process.env.REDIS_PORT || '6379', 10),
-    tll: parseInt(process.env.REDIS_TTL || '60', 10),
+    ttl: parseInt(process.env.REDIS_TTL || '120', 10),
   }),
 );

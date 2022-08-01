@@ -19,5 +19,5 @@
       }
     }
   },
-  "tags": ["layer:backend", "scope:api", "domain:shared", "subdomain:core", "type:core"]
+  "tags": ["layer:backend", "scope:api", "domain:shell", "type:shell"]
 }

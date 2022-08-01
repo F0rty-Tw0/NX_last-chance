@@ -58,7 +58,7 @@
               },
               {
                 "sourceTag": "type:app",
-                "onlyDependOnLibsWithTags": ["type:shell", "type:core", "type:assets", "type:styles", "type:util"]
+                "onlyDependOnLibsWithTags": ["type:shell", "type:assets", "type:styles", "type:util"]
               },
               {
                 "sourceTag": "type:feature",
@@ -71,10 +71,6 @@
                   "type:ui",
                   "type:util"
                 ]
-              },
-              {
-                "sourceTag": "type:core",
-                "onlyDependOnLibsWithTags": ["type:domain-logic", "type:data-access", "type:feature", "type:util"]
               },
               {
                 "sourceTag": "type:api",
@@ -94,7 +90,7 @@
               },
               {
                 "sourceTag": "type:shell",
-                "onlyDependOnLibsWithTags": ["type:feature", "type:util"]
+                "onlyDependOnLibsWithTags": ["type:feature", "type:domain-logic", "type:util"]
               },
               {
                 "sourceTag": "type:util",
@@ -117,6 +113,10 @@
                 "onlyDependOnLibsWithTags": ["domain:shared"]
               },
               {
+                "sourceTag": "domain:shell",
+                "onlyDependOnLibsWithTags": ["domain:shared"]
+              },
+              {
                 "sourceTag": "domain:assets",
                 "onlyDependOnLibsWithTags": ["domain:assets"]
               },
@@ -135,10 +135,6 @@
               {
                 "sourceTag": "domain:geo-location",
                 "onlyDependOnLibsWithTags": ["domain:geo-location", "domain:shared"]
-              },
-              {
-                "sourceTag": "subdomain:core",
-                "onlyDependOnLibsWithTags": ["subdomain:core", "domain:shared"]
               },
               {
                 "sourceTag": "subdomain:logger",

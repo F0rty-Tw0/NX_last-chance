@@ -4,6 +4,8 @@ import { ConfigModule } from '@nestjs/config';
 import { BackendApiSharedLoggerModule } from '@last-chance/backend/api/shared/logger';
 import { BackendApiSharedCacheModule } from '@last-chance/backend/api/shared/cache';
 import { BackendApiSharedExceptionFiltersModule } from '@last-chance/backend/api/shared/exception-filters';
+// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
+import { BackendApiGeoLocationDataAccessModule } from '@last-chance/backend/api/geo-location/data-access';
 
 import { coreEnvConfig } from './configs/coreEnvConfig';
 import { coreEnvConfigValidationSchema } from './configs/coreEnvConfigValidations';
@@ -13,6 +15,7 @@ import { DummyController } from './dummy.controller';
 @Module({
   controllers: [DummyController],
   imports: [
+    BackendApiGeoLocationDataAccessModule,
     BackendApiSharedLoggerModule,
     BackendApiSharedCacheModule,
     BackendApiSharedExceptionFiltersModule,

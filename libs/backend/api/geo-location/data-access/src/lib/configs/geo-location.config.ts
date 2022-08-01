@@ -25,7 +25,7 @@ export default registerAs(
       params: {
         output: 'json',
         pretty: true,
-        fields: 'location,country,ip',
+        fields: 'location.postal,location.city,location.latitude,location.longitude',
       },
       timeout: 10_000,
       maxRedirects: 5,

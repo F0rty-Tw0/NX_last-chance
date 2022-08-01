@@ -1,5 +1,6 @@
 import { Logger, ArgumentsHost, Catch, ExceptionFilter, HttpException, HttpStatus } from '@nestjs/common';
 import { FastifyReply, FastifyRequest } from 'fastify';
+import { AxiosError } from 'axios';
 
 import { TelegramBotNotificationFacade } from '@last-chance/backend/api/shared/telegram-bot';
 
@@ -23,6 +24,9 @@ export class AllExceptionsFilter implements ExceptionFilter {
       status = exception.getStatus();
       const errorResponse = exception.getResponse();
       errorMessage = (errorResponse as HttpExceptionResponse).message || exception.message;
+    } else if (exception instanceof AxiosError) {
+      status = exception.response?.status || HttpStatus.INTERNAL_SERVER_ERROR;
+      errorMessage = exception.response?.data?.message || exception.message;
     } else {
       status = HttpStatus.INTERNAL_SERVER_ERROR;
       errorMessage = 'Critical internal server Error occurred';
